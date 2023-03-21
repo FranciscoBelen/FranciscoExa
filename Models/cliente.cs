@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
-using Factura_Bici.Server.Request;
 using Factura_Bici.Shared.Records;
+using Factura_Bici.Shared.Request;
 
 namespace Factura_Bici.Server.Models;
 

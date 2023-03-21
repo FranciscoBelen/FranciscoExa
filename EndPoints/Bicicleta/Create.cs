@@ -7,9 +7,9 @@ using Factura_Bici.Shared.Wrapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace Factura_Bici.Server.Endpoints.Cliente;
+namespace Factura_Bici.Server.Endpoints.Bicicleta;
 
-using Request = clienteCreateRequest;
+using Request = bicicletaCreateRequest;
 using Respuesta = Result<int>;
 
 public class Create : EndpointBaseAsync.WithRequest<Request>.WithActionResult<Respuesta>
@@ -20,18 +20,18 @@ public class Create : EndpointBaseAsync.WithRequest<Request>.WithActionResult<Re
     {
         this.dbContext = dbContext;
     }
-    [HttpPost(ClienteRouteManager.BASE)]
+    [HttpPost(BicicletaRouteManager.BASE)]
     public override async Task<ActionResult<Respuesta>> HandleAsync(Request request, CancellationToken cancellationToken = default)
     {
         try
         {
             #region Validaciones
-            var rol = await dbContext.clientes.FirstOrDefaultAsync(r => r.Nombre.ToLower() == request.Nombre.ToLower(),cancellationToken);
+            var rol = await dbContext.bicicletas.FirstOrDefaultAsync(r => r.Modelo.ToLower() == request.Modelo.ToLower(),cancellationToken);
             if (rol != null)
-              return Respuesta.Fail($"Ya existe un rol con el nombre dado'({request.Nombre})'");
+              return Respuesta.Fail($"Ya existe un rol con el nombre dado'({request.Modelo})'");
             #endregion
-            rol = cliente.Crear(request);
-            dbContext.clientes.Add(rol);
+            rol = bicicleta.Crear(request);
+            dbContext.bicicletas.Add(rol);
             await dbContext.SaveChangesAsync(cancellationToken);
             return Respuesta.Success(rol.Id);
         }

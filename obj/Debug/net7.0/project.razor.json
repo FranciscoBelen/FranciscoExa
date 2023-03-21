@@ -6861,6 +6861,80 @@
         }
       },
       {
+        "HashCode": 304484710,
+        "Kind": "Components.Component",
+        "Name": "Fact.Client.Pages.UsuarioRoles.Usuario",
+        "AssemblyName": "Fact.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Usuario"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Fact.Client.Pages.UsuarioRoles.Usuario",
+          "Common.TypeNamespace": "Fact.Client.Pages.UsuarioRoles",
+          "Common.TypeNameIdentifier": "Usuario"
+        }
+      },
+      {
+        "HashCode": 212972596,
+        "Kind": "Components.Component",
+        "Name": "Fact.Client.Pages.UsuarioRoles.Usuario",
+        "AssemblyName": "Fact.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Fact.Client.Pages.UsuarioRoles.Usuario"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Fact.Client.Pages.UsuarioRoles.Usuario",
+          "Common.TypeNamespace": "Fact.Client.Pages.UsuarioRoles",
+          "Common.TypeNameIdentifier": "Usuario",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 2112823802,
+        "Kind": "Components.Component",
+        "Name": "Fact.Client.Pages.UsuarioRoles._Import",
+        "AssemblyName": "Fact.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "_Import"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Fact.Client.Pages.UsuarioRoles._Import",
+          "Common.TypeNamespace": "Fact.Client.Pages.UsuarioRoles",
+          "Common.TypeNameIdentifier": "_Import"
+        }
+      },
+      {
+        "HashCode": 1605383931,
+        "Kind": "Components.Component",
+        "Name": "Fact.Client.Pages.UsuarioRoles._Import",
+        "AssemblyName": "Fact.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Fact.Client.Pages.UsuarioRoles._Import"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Fact.Client.Pages.UsuarioRoles._Import",
+          "Common.TypeNamespace": "Fact.Client.Pages.UsuarioRoles",
+          "Common.TypeNameIdentifier": "_Import",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": -710081621,
         "Kind": "Components.Component",
         "Name": "Fact.Client.Shared.SurveyPrompt",

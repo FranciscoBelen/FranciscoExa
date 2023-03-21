@@ -6,9 +6,9 @@ using Factura_Bici.Shared.Wrapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace Factura_Bici.Server.Endpoints.Cliente;
-using Respuesta = Result<ClienteRecord>;
-using Request = ClienteRouteManager;
+namespace Factura_Bici.Server.Endpoints.Bicicleta;
+using Respuesta = Result<bicicletaRecord>;
+using Request = BicicletaRouteManager;
 
 public class GetById : EndpointBaseAsync.WithRequest<Request>.WithActionResult<Respuesta>
 {
@@ -18,12 +18,12 @@ public class GetById : EndpointBaseAsync.WithRequest<Request>.WithActionResult<R
     {
         this.dbContext = dbContext;
     }
-    [HttpGet(ClienteRouteManager.GetById)]
+    [HttpGet(BicicletaRouteManager.GetById)]
     public override async Task<ActionResult<Respuesta>> HandleAsync([FromRoute] Request request,CancellationToken cancellationToken = default)
     {
         try{
 
-        var rol = await dbContext.clientes
+        var rol = await dbContext.bicicletas
         .Where(r=>r.Id == request.Id)
         .Select(rol=>rol.ToRecord())
         .FirstOrDefaultAsync(cancellationToken);
